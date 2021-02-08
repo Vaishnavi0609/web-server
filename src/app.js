@@ -1,7 +1,9 @@
 const hbs = require("hbs")
 const path = require("path")
 express = require("express")
+
 const app = express()
+const port = process.env.PORT  || 3000
 
 const forecast = require("./utils/forecast")
 const geocode = require("./utils/geocode")
@@ -80,7 +82,7 @@ app.get("/help/*" , (req,res) => {
     })
    })
 
-app.listen(3000 , () => {
-    console.log("Sever is running on port 3000")
+app.listen(port , () => {
+    console.log("Sever is running on port " + port)
 })
 
