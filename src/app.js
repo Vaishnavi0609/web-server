@@ -12,7 +12,7 @@ publicPath = path.join(__dirname, "../public")
 viewsPath = path.join(__dirname, "../src/templates/views")
 partialsPath = path.join(__dirname, "../src/templates/partials")
 
-app.set("view engine" , "hbs")
+app.set("view engine" , ".hbs")
 app.set("views" , viewsPath)
 hbs.registerPartials(partialsPath)
 app.use(express.static(publicPath))
